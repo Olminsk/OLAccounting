@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Webpage</title>
+	<style>
+		body {
+			background-image: url("C:/Users/olegm/Downloads/my Background 3.jpg");
+			background-size: cover;
+		}
+
+		h1 {
+			position: absolute;
+			top: 7%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #ffffff;
+			font-family: "Agency FB", sans-serif;
+			font-size: 4rem;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		form {
+			position: absolute;
+			top: 80%;
+			right: -300px;
+			transform: translateY(-50%);
+			width: 170px;
+			background-color: #3b83b3;
+			padding: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+			border-radius: 20px;
+			animation-name: slide-in;
+			animation-duration: 3s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes slide-in {
+			from { right: -300px; }
+			to { right: 3%; }
+		}
+
+		form label {
+			display: block;
+			text-align: left;
+			margin-bottom: 5px;
+		}
+
+		form button[type="submit"] {
+			background-color: #0b24a1;
+			color: white;
+			font-size: 16px;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+			transition: background-color 0.3s ease-in-out;
+			margin-top: 20px;
+			margin-left: 10px;
+			margin-right: 0;
+			display: block;
+		}
+
+		form button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<form action="process.php" method="post">
+	  <label for="name">Name:</label>
+	  <input type="text" id="name" name="name" required>
+	  
+	  <label for="email">Email:</label>
+	  <input type="email" id="email" name="email" required>
+	  
+	  <label for="message">Message:</label>
+	  <textarea id="message" name="message" required></textarea>
+	  
+	  <button type="submit">Send Request</button>
+	</form>
+</body>
+
+</html>
